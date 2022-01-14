@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<br>
+<form [formGroup]="formProfile" (ngSubmit)="patch()">
+  <input class="form-control" type="text" formControlName="phone">
+  <img *ngIf="profile" src="{{baseurl}}{{profile.photo}}" alt="">
+  <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target)">
+  {{fileToUpload}}
+  <button (click)="update()">Обновить фото</button>
+  <button class="btn vd_bg-green vd_white width-100" type="submit">Обновить</button>
+</form>

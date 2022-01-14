@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div *ngIf="products">
+  <div *ngFor="let item of products">
+    <h4>{{item.name}}</h4>
+    <h5>${{item.price}}</h5>
+    <button (click)="addCart(item)">Купить</button>
+  </div>
+</div>
